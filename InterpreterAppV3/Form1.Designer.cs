@@ -28,12 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            code_input = new RichTextBox();
+            run_btn = new Button();
+            SuspendLayout();
+            // 
+            // code_input
+            // 
+            code_input.Location = new Point(12, 12);
+            code_input.Name = "code_input";
+            code_input.Size = new Size(360, 308);
+            code_input.TabIndex = 0;
+            code_input.Text = "";
+            // 
+            // run_btn
+            // 
+            run_btn.Location = new Point(297, 326);
+            run_btn.Name = "run_btn";
+            run_btn.Size = new Size(75, 23);
+            run_btn.TabIndex = 1;
+            run_btn.Text = "Run";
+            run_btn.UseVisualStyleBackColor = true;
+            run_btn.Click += run_btn_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(384, 361);
+            Controls.Add(run_btn);
+            Controls.Add(code_input);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private RichTextBox code_input;
+        private Button run_btn;
     }
 }
