@@ -5,15 +5,15 @@ namespace InterpreterAppV3.Library.Tree.Expression
 {
     public class ParenthesisNode : ExpressionNode
     {
-        public ParenthesisNode(Token open_pr, ExpressionNode expression, Token close_pr)
+        public ParenthesisNode(Token open_pr, ExpressionNode expression_node, Token close_pr)
         {
             Open_Pr = open_pr;
-            Expression = expression;
+            Expression_Node = expression_node;
             Close_Pr = close_pr;
         }
 
         public Token Open_Pr { get; }
-        public ExpressionNode Expression { get; }
+        public ExpressionNode Expression_Node { get; }
         public Token Close_Pr { get; }
     }
 }
