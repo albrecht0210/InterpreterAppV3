@@ -12,9 +12,10 @@ namespace InterpreterAppV3.Library.Tree.Expression.Term
     {
         private dynamic _value;
 
-        public LiteralNode(CodeDataType data_type, Token token_node) : base(data_type, token_node)
+        public LiteralNode(Token token_node) : base(token_node)
         {
             this._value = Convert();
+            this.Data_Type = GetDataType();
         }
 
         public dynamic Value { get => _value; }
@@ -34,6 +35,23 @@ namespace InterpreterAppV3.Library.Tree.Expression.Term
                 return c_val;
 
             return Token_Node.Code_Fragement;
+        }
+
+        private CodeDataType GetDataType()
+        {
+            if (this.Value is int)
+                return CodeDataType.INT;
+
+            if (this.Value is float)
+                return CodeDataType.FLOAT;
+
+            if (this.Value is bool)
+                return CodeDataType.BOOL;
+
+            if (this.Value is char)
+                return CodeDataType.CHAR;
+
+            return CodeDataType.STRING;
         }
     }
 }
