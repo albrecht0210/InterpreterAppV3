@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterpreterAppV3.Library.Tree.Statement
 {
-    internal class StatementNode
+    public abstract class StatementNode : AST
     {
     }
 }
