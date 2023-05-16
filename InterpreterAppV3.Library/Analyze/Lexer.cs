@@ -12,14 +12,12 @@ namespace InterpreterAppV3.Library.Analyze
     {
         private readonly string _code;
         private int _text_position, _text_line, _text_column;
-        private bool _has_carriage_return;
 
         public Lexer(string code)
         {
             this._code = code;
             this._text_position = 0;
             this._text_line = this._text_column = 1;
-            this._has_carriage_return = false;
         }
 
         private char Peek(int offset)
@@ -217,7 +215,7 @@ namespace InterpreterAppV3.Library.Analyze
             int col = _text_column;
 
             // Call Next while current char is not whitespace
-            while (!char.IsWhiteSpace(Current))
+            while (char.IsDigit(Current) || Current == '.')
                 Next();
 
             // Get the text and its length
