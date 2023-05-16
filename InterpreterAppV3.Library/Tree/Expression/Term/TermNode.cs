@@ -16,7 +16,12 @@ namespace InterpreterAppV3.Library.Tree.Expression.Term
             Token_Node = token_node;
         }
 
-        public CodeDataType Data_Type { get; }
+        protected TermNode(Token token_node)
+        {
+            Token_Node = token_node;
+        }
+
+        public CodeDataType Data_Type { get; set; }
         public Token Token_Node { get; }
     }
 }

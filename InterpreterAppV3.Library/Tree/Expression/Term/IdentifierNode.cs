@@ -12,13 +12,11 @@ namespace InterpreterAppV3.Library.Tree.Expression.Term
     {
         private string _name;
 
-        public IdentifierNode(CodeDataType data_type, Token token_node, LiteralNode literal) : base(data_type, token_node)
+        public IdentifierNode(CodeDataType data_type, Token token_node) : base(data_type, token_node)
         {
             this._name = token_node.Code_Fragement;
-            Literal = literal;
         }
 
         public string Name { get => _name; set => _name = value; }
-        public LiteralNode Literal { get; }
     }
 }
