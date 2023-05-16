@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace InterpreterAppV3.Library.Analyze.Helper
 {
-    public class LexerHelper
+    public static class LexerHelper
     {
         public static bool RegexMatcher(string pattern, string text)
         {
