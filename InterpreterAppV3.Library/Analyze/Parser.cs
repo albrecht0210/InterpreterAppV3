@@ -69,7 +69,7 @@ namespace InterpreterAppV3.Library.Analyze
                 {
                     statements.Add(ParseAssignment());
                 }
-                else if (ParserHelper.IsSymbolMatch(Symbol.DISPLAY, _current_token.Symbol)
+                else if (ParserHelper.IsSymbolMatch(Symbol.DISPLAY, _current_token.Symbol))
                 {
                     statements.Add(ParseDisplay());
                 }
