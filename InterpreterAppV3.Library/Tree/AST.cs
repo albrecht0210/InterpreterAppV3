@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterpreterAppV3.Library.Tree
 {
-    internal class AST
+    public abstract class AST
     {
     }
 }
